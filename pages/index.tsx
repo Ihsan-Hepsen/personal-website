@@ -77,9 +77,9 @@ export default function Home() {
               built microservices using containerization technologies like Docker, ensuring the
               scalability and maintainability of the services.
             </p>
-            <button className='primary-btn'>
+            <a href='https://www.linkedin.com/in/ihsan-h-287ba41b7/' className='primary-btn' target='_blank'>
               Connect on LinkedIn
-            </button>
+            </a>
           </div>
         </section>
       </div>
