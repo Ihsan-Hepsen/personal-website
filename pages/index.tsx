@@ -1,12 +1,14 @@
 import Head from 'next/head'
 
 import { Catamaran } from 'next/font/google'
-import { Avatar, Button, IconButton } from '@mui/material/'
 import { useState, useEffect, SetStateAction } from 'react'
+
+import { Avatar, Button, IconButton } from '@mui/material/'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkMode from '@mui/icons-material/DarkMode'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import Link from 'next/link'
 
 const inter = Catamaran({ subsets: ['latin'] })
 
@@ -140,14 +142,17 @@ export default function Home() {
 
         <section className='heroSection'>
           <h3>Let's Connect 🤝</h3>
-          <IconButton className='primary-btn' aria-label="linkedin-profile" size="large">
-            {/* <p>LinkedIn</p> */}
-            <LinkedInIcon fontSize="medium" />
-          </IconButton>
-          <IconButton className='primary-btn' aria-label="github-profile" size="large">
-            {/* <p>GitHub</p> */}
-            <GitHubIcon fontSize="medium" />
-          </IconButton>
+          <Link href="https://www.linkedin.com/in/ihsan-h-287ba41b7" target="_blank" rel="noopener noreferrer">
+            <IconButton className='primary-btn' aria-label="linkedin-profile" size="large">
+              {/* <p>LinkedIn</p> */}
+              <LinkedInIcon fontSize="medium" />
+            </IconButton>
+          </Link>
+          <Link href="https://github.com/ihsan-hepsen" target="_blank" rel="noopener noreferrer">
+            <IconButton className='primary-btn' aria-label="github-profile" size="large">
+              <GitHubIcon fontSize="medium" />
+            </IconButton>
+          </Link>
         </section>
 
       </div>
