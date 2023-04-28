@@ -19,7 +19,7 @@ export default function ButtonGroupNav() {
       <ButtonGroup size='small' variant="outlined" aria-label="outlined button group">
         <Button className='nav-btn' variant='text' href='#about'>About</Button>
         <Button className='nav-btn' variant='text' href='#skills'>Skills</Button>
-        <Button className='nav-btn' variant='text' href='#interests'>Interests</Button>
+        <Button className='nav-btn' variant='text' href='#projects'>Projects</Button>
         <Button className='nav-btn' variant='text' href='#socials'>Socials</Button>
       </ButtonGroup>
     </Box>

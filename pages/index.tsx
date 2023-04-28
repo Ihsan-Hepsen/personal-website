@@ -4,17 +4,17 @@ import Link from 'next/link'
 import { useState, useEffect, SetStateAction } from 'react'
 import { Catamaran } from 'next/font/google'
 
-import { Avatar, Box, Button, IconButton } from '@mui/material'
+import { Avatar } from '@mui/material'
 import {
   LightMode as LightModeIcon,
-  DarkMode as DarkModeIcon,
-  GitHub as GitHubIcon,
-  LinkedIn as LinkedInIcon,
   DarkMode
 } from '@mui/icons-material'
 import ButtonGroupNav from '@/components/ButtonGroupNav'
 import ProjectCard from '@/components/ProjectCard'
 import ProjectSection from '@/components/ProjectsSection'
+import AboutSection from '@/components/static/AboutSection'
+import SkillsSection from '@/components/static/SkillsSection'
+import SocialsSection from '@/components/static/SocialsSection'
 
 
 const inter = Catamaran({ subsets: ['latin'] })
@@ -64,7 +64,6 @@ export default function Home() {
       </Head>
 
       <div className='container'>
-
         <nav>
           <Avatar alt="Ihsan Hepsen profile pic" src="/profile-pic.jpg" sx={{ width: 140, height: 140 }} />
           <div className="toggle-container">
@@ -77,96 +76,11 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* <Box> */}
         <ButtonGroupNav />
-
-        {/* </Box> */}
-        <section className='heroSection' id='about'>
-          <h1>👋 Hi, Ihsan here!</h1>
-          <h3>
-            ...full-stack software engineer and web developer.
-          </h3>
-          <p>
-            As a full-stack software engineer and web developer, I have extensive experience working with various technologies,
-            including Java Spring, React.js, and TypeScript. I have built several web applications using these technologies,
-            and I'm comfortable working on both the front-end and back-end parts of the stack.
-          </p>
-          <br />
-          <p>
-            In addition to deploying applications to cloud services like Google App Engine and Azure, I have also
-            built microservices using containerization technologies like Docker, ensuring the
-            scalability and maintainability of the services.
-          </p>
-          <br />
-          <p>
-            Collaborating on more than 9 real-world projects has given me the chance to work with teams of accomplished
-            individuals and perfect my ability to work collectively. As a result of these ventures, I acquired
-            knowledge and expertise on how software development operates; thus, I am eager to apply this invaluable
-            experience working collaboratively with other seasoned professionals.
-          </p>
-        </section>
-
-        <section className='heroSection' id='skills'>
-          <h3>My Skills 💪</h3>
-          <ul>
-            <li>Java</li>
-            <li>Spring Framework</li>
-            <li>OOP</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>RESTful API</li>
-            <li>GraphQL</li>
-            <li>UML</li>
-            <li>Linux</li>
-            <li>Shell Scripting</li>
-            <li>Docker</li>
-            <li>Microservices</li>
-            <li>SQL</li>
-            <li>Oracle SQL</li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>GitLab</li>
-            <li>Google Cloud Platform (GCP)</li>
-            <li>Microsoft Azure</li>
-            <li>Agile & Scrum</li>
-            <li>Domain Driven Design (DDD)</li>
-            <li>Rabbit MQ</li>
-          </ul>
-        </section>
-
-        {/* <section className='heroSection' id='projects'>
-          <h3>Projects 📚</h3>
-          <ProjectSection />
-          {/* <p>
-            My interests lie in building seamless user interfaces and developing robust backend services
-            as a full-stack developer. I thrive on exploring new technologies and frameworks to stay
-            up-to-date with the latest industry trends, and I am constantly working to enhance my
-            programming skills
-          </p> */}
-        {/* </section> */}
+        <AboutSection />
+        <SkillsSection />
         <ProjectSection />
-
-        <section className='heroSection' id='socials'>
-          <h3>Let's Connect 🤝</h3>
-          <Link href="https://www.linkedin.com/in/ihsan-h-287ba41b7" target="_blank" rel="noopener noreferrer">
-            <IconButton className='primary-btn' aria-label="linkedin-profile" size="large">
-              {/* <p>LinkedIn</p> */}
-              <LinkedInIcon fontSize="large" />
-            </IconButton>
-          </Link>
-          <Link href="https://github.com/ihsan-hepsen" target="_blank" rel="noopener noreferrer">
-            <IconButton className='primary-btn' aria-label="github-profile" size="large">
-              <GitHubIcon fontSize="large" />
-            </IconButton>
-          </Link>
-        </section>
-
+        <SocialsSection />
       </div>
     </>
   )

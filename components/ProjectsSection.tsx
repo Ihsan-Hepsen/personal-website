@@ -11,21 +11,21 @@ const projects = {
     },
     'bmacBackend': {
         title: 'Bake Me a Cake (BMaC) Backend',
-        tools: ['Java', 'Spring Framework', 'JUnit', 'Mockito'],
+        tools: ['Java', 'Spring Framework', 'JUnit', 'Mockito', 'Docker', 'MySQL'],
         desc: 'Bake me a cake microservice backend service for warehouse, factory, and store domains.',
         link: 'https://github.com/Ihsan-Hepsen/Bake-Me-a-Cake-Backend'
     },
     'transferLearning': {
         title: 'Transfer Learning',
-        tools: ['VGG 16 Image set', ''],
+        tools: ['VGG 16 Image set', 'Python', 'Jupyter Notebook'],
         desc: 'Using transfer learning to build a convolutional neural network to detect celebrity images.',
         link: 'https://github.com/Ihsan-Hepsen/Transfer-Learning'
     },
     'aviato': {
-        title: '',
-        tools: [],
-        desc: '',
-        link: ''
+        title: 'Aviato, CRUD App',
+        tools: ['Java', 'Spring Framework', 'Tyhmeleaf', 'Bootsrap', 'GraphQL', 'PostgreSQL'],
+        desc: 'Flight browsing system with added user management and spring security. GraphQL added as an alternative to REST.',
+        link: 'https://github.com/Ihsan-Hepsen/Aviato-Improved'
     },
 
 }
@@ -37,7 +37,7 @@ export default function ProjectSection() {
             <ProjectCard className='project-cards' title={projects["bmacFrontend"].title} tools={projects["bmacFrontend"].tools} desc={projects["bmacFrontend"].desc} repoLink={projects["bmacFrontend"].link} />
             <ProjectCard className='project-cards' title={projects["bmacBackend"].title} tools={projects["bmacBackend"].tools} desc={projects["bmacBackend"].desc} repoLink={projects["bmacBackend"].link} />
             <ProjectCard className='project-cards' title={projects["transferLearning"].title} tools={projects["transferLearning"].tools} desc={projects["transferLearning"].desc} repoLink={projects["transferLearning"].link} />
-            <ProjectCard className='project-cards' title="Bake Me a Cake" tools={['Java', 'Java Script']} desc='best projecct ever' repoLink="#" />
+            <ProjectCard className='project-cards' title={projects["aviato"].title} tools={projects["aviato"].tools} desc={projects["aviato"].desc} repoLink={projects["aviato"].link} />
         </section>
     )
 }

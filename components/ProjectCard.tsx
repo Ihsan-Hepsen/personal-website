@@ -31,7 +31,7 @@ export default function ProjectCard({ title, tools, desc, repoLink }: ProjectCar
                             { title }
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            Built using: { ...tools }
+                            <b>Built using:</b> {tools.join(', ')}
                         </Typography>
                         <Typography variant="body2">
                             { desc }
