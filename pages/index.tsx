@@ -1,14 +1,21 @@
 import Head from 'next/head'
-
-import { Catamaran } from 'next/font/google'
-import { useState, useEffect, SetStateAction } from 'react'
-
-import { Avatar, Button, IconButton } from '@mui/material/'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import DarkMode from '@mui/icons-material/DarkMode'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Link from 'next/link'
+
+import { useState, useEffect, SetStateAction } from 'react'
+import { Catamaran } from 'next/font/google'
+
+import { Avatar, Box, Button, IconButton } from '@mui/material'
+import {
+  LightMode as LightModeIcon,
+  DarkMode as DarkModeIcon,
+  GitHub as GitHubIcon,
+  LinkedIn as LinkedInIcon,
+  DarkMode
+} from '@mui/icons-material'
+import ButtonGroupNav from '@/components/ButtonGroupNav'
+import ProjectCard from '@/components/ProjectCard'
+import ProjectSection from '@/components/ProjectsSection'
+
 
 const inter = Catamaran({ subsets: ['latin'] })
 
@@ -38,6 +45,7 @@ export default function Home() {
       '--initial-color-mode'
     );
     // Set initial darkmode to light
+    // @ts-ignore
     setDarkTheme(initialColorValue === 'dark')
   }, []);
 
@@ -69,8 +77,11 @@ export default function Home() {
           </div>
         </nav>
 
+        {/* <Box> */}
+        <ButtonGroupNav />
 
-        <section className='heroSection'>
+        {/* </Box> */}
+        <section className='heroSection' id='about'>
           <h1>👋 Hi, Ihsan here!</h1>
           <h3>
             ...full-stack software engineer and web developer.
@@ -95,19 +106,18 @@ export default function Home() {
           </p>
         </section>
 
-        <section className='heroSection'>
+        <section className='heroSection' id='skills'>
           <h3>My Skills 💪</h3>
-          <p></p>
           <ul>
             <li>Java</li>
             <li>Spring Framework</li>
+            <li>OOP</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React</li>
             <li>HTML</li>
             <li>CSS</li>
             <li>Python</li>
-            <li>OOP</li>
             <li>RESTful API</li>
             <li>GraphQL</li>
             <li>UML</li>
@@ -123,34 +133,36 @@ export default function Home() {
             <li>GitHub</li>
             <li>GitLab</li>
             <li>Google Cloud Platform (GCP)</li>
-            <li>Azure</li>
+            <li>Microsoft Azure</li>
             <li>Agile & Scrum</li>
             <li>Domain Driven Design (DDD)</li>
             <li>Rabbit MQ</li>
           </ul>
         </section>
 
-        <section className='heroSection'>
-          <h3>My Interests 🔍</h3>
-          <p>
+        {/* <section className='heroSection' id='projects'>
+          <h3>Projects 📚</h3>
+          <ProjectSection />
+          {/* <p>
             My interests lie in building seamless user interfaces and developing robust backend services
             as a full-stack developer. I thrive on exploring new technologies and frameworks to stay
             up-to-date with the latest industry trends, and I am constantly working to enhance my
             programming skills
-          </p>
-        </section>
+          </p> */}
+        {/* </section> */}
+        <ProjectSection />
 
-        <section className='heroSection'>
+        <section className='heroSection' id='socials'>
           <h3>Let's Connect 🤝</h3>
           <Link href="https://www.linkedin.com/in/ihsan-h-287ba41b7" target="_blank" rel="noopener noreferrer">
             <IconButton className='primary-btn' aria-label="linkedin-profile" size="large">
               {/* <p>LinkedIn</p> */}
-              <LinkedInIcon fontSize="medium" />
+              <LinkedInIcon fontSize="large" />
             </IconButton>
           </Link>
           <Link href="https://github.com/ihsan-hepsen" target="_blank" rel="noopener noreferrer">
             <IconButton className='primary-btn' aria-label="github-profile" size="large">
-              <GitHubIcon fontSize="medium" />
+              <GitHubIcon fontSize="large" />
             </IconButton>
           </Link>
         </section>

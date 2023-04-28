@@ -23,6 +23,7 @@
 
 html {
   margin: 0.5rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -156,7 +157,7 @@ section .heroSection {
   font-size: 25px;
 }
 
-.heroSection > p {
+.heroSection > p, li{
   font-size: 18px;
   color: var(--color-paragraph);
 }
@@ -182,4 +183,9 @@ section .heroSection {
 .in-line-btn {
   color: #2667ff;
   text-decoration: none;
+}
+
+.nav-btn {
+  text-decoration: underline;
+  color: var(--color-button);
 }
