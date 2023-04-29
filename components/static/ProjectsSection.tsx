@@ -1,6 +1,4 @@
-import { Box } from "@mui/material";
-import ProjectCard from "./ProjectCard";
-
+import ProjectCard from "../ProjectCard"
 
 const projects = {
     'bmacFrontend': {
@@ -34,10 +32,10 @@ export default function ProjectSection() {
     return (
         <section className='heroSection' id='projects'>
             <h3>Projects 📚</h3>
-            <ProjectCard className='project-cards' title={projects["bmacFrontend"].title} tools={projects["bmacFrontend"].tools} desc={projects["bmacFrontend"].desc} repoLink={projects["bmacFrontend"].link} />
-            <ProjectCard className='project-cards' title={projects["bmacBackend"].title} tools={projects["bmacBackend"].tools} desc={projects["bmacBackend"].desc} repoLink={projects["bmacBackend"].link} />
-            <ProjectCard className='project-cards' title={projects["transferLearning"].title} tools={projects["transferLearning"].tools} desc={projects["transferLearning"].desc} repoLink={projects["transferLearning"].link} />
-            <ProjectCard className='project-cards' title={projects["aviato"].title} tools={projects["aviato"].tools} desc={projects["aviato"].desc} repoLink={projects["aviato"].link} />
+            <ProjectCard title={projects["bmacFrontend"].title} tools={projects["bmacFrontend"].tools} desc={projects["bmacFrontend"].desc} repoLink={projects["bmacFrontend"].link} />
+            <ProjectCard title={projects["bmacBackend"].title} tools={projects["bmacBackend"].tools} desc={projects["bmacBackend"].desc} repoLink={projects["bmacBackend"].link} />
+            <ProjectCard title={projects["transferLearning"].title} tools={projects["transferLearning"].tools} desc={projects["transferLearning"].desc} repoLink={projects["transferLearning"].link} />
+            <ProjectCard title={projects["aviato"].title} tools={projects["aviato"].tools} desc={projects["aviato"].desc} repoLink={projects["aviato"].link} />
         </section>
     )
 }

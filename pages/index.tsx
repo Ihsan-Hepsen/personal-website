@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 import { useState, useEffect, SetStateAction } from 'react'
 import { Catamaran } from 'next/font/google'
@@ -10,8 +9,7 @@ import {
   DarkMode
 } from '@mui/icons-material'
 import ButtonGroupNav from '@/components/ButtonGroupNav'
-import ProjectCard from '@/components/ProjectCard'
-import ProjectSection from '@/components/ProjectsSection'
+import ProjectSection from '@/components/static/ProjectsSection'
 import AboutSection from '@/components/static/AboutSection'
 import SkillsSection from '@/components/static/SkillsSection'
 import SocialsSection from '@/components/static/SocialsSection'
