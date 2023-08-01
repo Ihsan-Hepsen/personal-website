@@ -13,6 +13,7 @@ import ProjectSection from '@/components/static/ProjectsSection'
 import AboutSection from '@/components/static/AboutSection'
 import SkillsSection from '@/components/static/SkillsSection'
 import SocialsSection from '@/components/static/SocialsSection'
+import AchievementsSection from '@/components/static/AchievementsSection'
 
 
 const inter = Catamaran({ subsets: ['latin'] })
@@ -76,6 +77,7 @@ export default function Home() {
 
         <ButtonGroupNav />
         <AboutSection />
+        <AchievementsSection />
         <SkillsSection />
         <ProjectSection />
         <SocialsSection />

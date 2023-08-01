@@ -2,7 +2,7 @@
 export default function SkillsSection() {
     return (
         <section className='heroSection' id='skills'>
-            <h3>My Skills 💪</h3>
+            <h3>My Skills</h3>
             <ul>
                 <li>Java</li>
                 <li>Spring Framework</li>

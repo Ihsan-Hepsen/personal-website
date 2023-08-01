@@ -15,9 +15,9 @@
   --color-primary-accent: #00f7ff;
   --color-primary: #fff;
   --color-button: #00f7ff;
-  --color-paragraph: #8a8a8a;
-  --color-button-text: rgb(0, 0, 0);
-  --color-background: #22212b;
+  --color-paragraph: #b7b6b6;
+  --color-button-text: rgb(224, 221, 221);
+  --color-background: #16161a;
   --color-anchor: #00f7ff;
 }
 
@@ -165,8 +165,8 @@ section .heroSection {
 .heroSection .primary-btn {
   cursor: pointer;
   margin-top: .4rem;
-  background: var(--color-button);
-  color: var(--color-background);
+  background: var(--color-background);
+  color: var(--color-button);
   border-radius: 5px;
   padding: .4rem .8rem;
   font-weight: bold;
@@ -174,11 +174,11 @@ section .heroSection {
   text-decoration: none;
 }
 
-.primary-btn {
+/* .primary-btn {
   color: var(--color-anchor);
   padding: 1rem;
-  margin: .7rem;
-}
+  margin: 1rem;
+} */
 
 .in-line-btn {
   color: #2667ff;

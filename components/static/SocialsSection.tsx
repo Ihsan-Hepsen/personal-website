@@ -10,7 +10,7 @@ import { IconButton, Link } from '@mui/material'
 export default function SocialsSection() {
     return (
         <section className='heroSection' id='socials'>
-            <h3>Let's Connect 🤝</h3>
+            <h3>Let's Connect</h3>
             <Link href="https://www.linkedin.com/in/ihsan-h-287ba41b7" target="_blank" rel="noopener noreferrer">
                 <IconButton className='primary-btn' aria-label="linkedin-profile" size="large">
                     <LinkedInIcon fontSize="large" />
