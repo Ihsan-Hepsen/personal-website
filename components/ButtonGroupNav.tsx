@@ -23,5 +23,5 @@ export default function ButtonGroupNav() {
         <Button className='nav-btn' variant='text' href='#socials'>Socials</Button>
       </ButtonGroup>
     </Box>
-  );
+  )
 }

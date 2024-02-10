@@ -78,8 +78,8 @@ export default function Home() {
         <ButtonGroupNav />
         <AboutSection />
         <AchievementsSection />
-        <SkillsSection />
         <ProjectSection />
+        <SkillsSection />
         <SocialsSection />
       </div>
     </>

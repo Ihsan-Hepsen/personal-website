@@ -24,21 +24,30 @@ type ProjectCard = {
 export default function ProjectCard({ title, tools, desc, repoLink }: ProjectCard) {
     return (
         <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined" sx={{m: 2, p: 1}}>
+            <Card variant="outlined" sx={{ m: 2, p: 1 }}>
                 <React.Fragment>
                     <CardContent>
                         <Typography variant="h5" component="div">
-                            { title }
+                            {title}
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             <b>Built using:</b> {tools.join(', ')}
                         </Typography>
                         <Typography variant="body2">
-                            { desc }
+                            {desc}
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button href={ repoLink } variant='contained' size="small">View on GitHUb</Button>
+                        <Button
+                            component="a"
+                            href={repoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="contained"
+                            size="small"
+                        >
+                            View on GitHub
+                        </Button>
                     </CardActions>
                 </React.Fragment>
             </Card>

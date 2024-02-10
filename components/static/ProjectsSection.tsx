@@ -1,6 +1,18 @@
 import ProjectCard from "../ProjectCard"
 
 const projects = {
+    'chromeExtension': {
+        title: 'AI-Powered Chrome Extension',
+        tools: ['JavaScript', 'Open AI', 'ChatGPT 3.5', 'HTML', 'CSS'],
+        desc: 'AI Article Assistant is a Chrome extension designed to enhance your browsing and research experience. It enables you to summarize, bulletize, and elaborate any selected text using ChatGPT 3.5 Turbo.',
+        link: 'https://github.com/Ihsan-Hepsen/AI-Article-Assistant'
+    },
+    'urlShortener': {
+        title: 'URL Shortener',
+        tools: ['Java', 'Spring Boot', 'MySQL', 'Docker', 'HTML', 'CSS', 'HTMX'],
+        desc: 'Simple URL shortener website for long links you may have.',
+        link: 'https://github.com/Ihsan-Hepsen/URL-Shortener/'
+    },
     'bmacFrontend': {
         title: 'Bake Me a Cake (BMaC) React Client',
         tools: ['React JS', 'TypeScript', 'Material UI'],
@@ -29,13 +41,24 @@ const projects = {
 }
 
 export default function ProjectSection() {
+    const gridStyle = {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: '20px',
+        padding: '20px',
+    }
+
     return (
         <section className='heroSection' id='projects'>
             <h3>Projects</h3>
-            <ProjectCard title={projects["bmacFrontend"].title} tools={projects["bmacFrontend"].tools} desc={projects["bmacFrontend"].desc} repoLink={projects["bmacFrontend"].link} />
-            <ProjectCard title={projects["bmacBackend"].title} tools={projects["bmacBackend"].tools} desc={projects["bmacBackend"].desc} repoLink={projects["bmacBackend"].link} />
-            <ProjectCard title={projects["transferLearning"].title} tools={projects["transferLearning"].tools} desc={projects["transferLearning"].desc} repoLink={projects["transferLearning"].link} />
-            <ProjectCard title={projects["aviato"].title} tools={projects["aviato"].tools} desc={projects["aviato"].desc} repoLink={projects["aviato"].link} />
+            <div style={gridStyle}>
+                <ProjectCard title={projects["chromeExtension"].title} tools={projects["chromeExtension"].tools} desc={projects["chromeExtension"].desc} repoLink={projects["chromeExtension"].link} />
+                <ProjectCard title={projects["urlShortener"].title} tools={projects["urlShortener"].tools} desc={projects["urlShortener"].desc} repoLink={projects["urlShortener"].link} />
+                <ProjectCard title={projects["bmacFrontend"].title} tools={projects["bmacFrontend"].tools} desc={projects["bmacFrontend"].desc} repoLink={projects["bmacFrontend"].link} />
+                <ProjectCard title={projects["bmacBackend"].title} tools={projects["bmacBackend"].tools} desc={projects["bmacBackend"].desc} repoLink={projects["bmacBackend"].link} />
+                <ProjectCard title={projects["transferLearning"].title} tools={projects["transferLearning"].tools} desc={projects["transferLearning"].desc} repoLink={projects["transferLearning"].link} />
+                <ProjectCard title={projects["aviato"].title} tools={projects["aviato"].tools} desc={projects["aviato"].desc} repoLink={projects["aviato"].link} />
+            </div>
         </section>
     )
 }
